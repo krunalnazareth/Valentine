@@ -6,22 +6,28 @@
   <style>
     body {
       height: 100vh;
+      margin: 0;
       display: flex;
       justify-content: center;
       align-items: center;
       background: #ffe6eb;
       font-family: Arial, sans-serif;
+      overflow: hidden;
     }
+
     .card {
       background: white;
       padding: 30px;
       border-radius: 15px;
       text-align: center;
       box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      position: relative;
     }
+
     h1 {
       color: #ff4d6d;
     }
+
     button {
       margin: 10px;
       padding: 10px 20px;
@@ -30,28 +36,41 @@
       font-size: 16px;
       cursor: pointer;
     }
+
     .yes {
       background: #ff4d6d;
       color: white;
     }
+
     .no {
       background: #ccc;
+      position: absolute;
     }
   </style>
 </head>
 <body>
   <div class="card">
-    <h1>Will you be my Valentine Devu? 💖</h1>
+    <h1>Will you be my Valentine Devu? ❤️</h1>
     <button class="yes" onclick="yes()">Yes 💕</button>
-    <button class="no" onclick="no()">No 🙈</button>
+    <button class="no" id="noBtn">No 🙈</button>
   </div>
 
   <script>
+    const noBtn = document.getElementById("noBtn");
+
+    noBtn.addEventListener("mouseover", () => {
+      const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+      const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+      noBtn.style.left = `${x}px`;
+      noBtn.style.top = `${y}px`;
+    });
+
     function yes() {
-      document.body.innerHTML = "<h1 style='color:#ff4d6d'>Yay! 💘 I love you baby!</h1>";
-    }
-    function no() {
-      alert("Nice try babe 😜");
+      document.body.innerHTML = `
+        <h1 style="color:#ff4d6d; text-align:center;">
+          Yay!! 💘 I can’t wait to be your Valentine baby ❤️
+        </h1>
+      `;
     }
   </script>
 </body>
