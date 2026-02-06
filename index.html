@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Be My Valentine?</title>
+  <style>
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #ffe6eb;
+      font-family: Arial, sans-serif;
+    }
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #ff4d6d;
+    }
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .yes {
+      background: #ff4d6d;
+      color: white;
+    }
+    .no {
+      background: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Will you be my Valentine Devu? 💖</h1>
+    <button class="yes" onclick="yes()">Yes 💕</button>
+    <button class="no" onclick="no()">No 🙈</button>
+  </div>
+
+  <script>
+    function yes() {
+      document.body.innerHTML = "<h1 style='color:#ff4d6d'>Yay! 💘 I love you baby!</h1>";
+    }
+    function no() {
+      alert("Nice try babe 😜");
+    }
+  </script>
+</body>
+</html>
