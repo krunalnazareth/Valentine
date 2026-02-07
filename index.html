@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Be My Valentine?</title>
+  <title>Happy Rose Day Devu 🌹</title>
   <style>
     body {
       height: 100vh;
@@ -10,67 +10,52 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background: #ffe6eb;
+      background: #fff0f3;
       font-family: Arial, sans-serif;
-      overflow: hidden;
     }
-
     .card {
       background: white;
       padding: 30px;
       border-radius: 15px;
       text-align: center;
       box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-      position: relative;
     }
-
     h1 {
-      color: #ff4d6d;
+      color: #c9184a;
+      font-size: 40px;
     }
-
+    p {
+      font-size: 18px;
+      color: #333;
+    }
     button {
-      margin: 10px;
+      margin-top: 15px;
       padding: 10px 20px;
       border: none;
       border-radius: 20px;
+      background: #c9184a;
+      color: white;
       font-size: 16px;
       cursor: pointer;
-    }
-
-    .yes {
-      background: #ff4d6d;
-      color: white;
-    }
-
-    .no {
-      background: #ccc;
-      position: absolute;
     }
   </style>
 </head>
 <body>
   <div class="card">
-    <h1>Will you be my Valentine Devu? ❤️</h1>
-    <button class="yes" onclick="yes()">Yes 💕</button>
-    <button class="no" id="noBtn">No 🙈</button>
+    <h1>🌹</h1>
+    <p>This rose is for you baby ❤️</p>
+    <button onclick="reveal()">Click to read 💌</button>
   </div>
 
   <script>
-    const noBtn = document.getElementById("noBtn");
-
-    noBtn.addEventListener("mouseover", () => {
-      const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
-      const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
-      noBtn.style.left = `${x}px`;
-      noBtn.style.top = `${y}px`;
-    });
-
-    function yes() {
-      document.body.innerHTML = `
-        <h1 style="color:#ff4d6d; text-align:center;">
-          Yay!! 💘 I can’t wait to be your Valentine baby ❤️ 
-          I love you Devu 😘
-        </h1>
+    function reveal() {
+      document.querySelector(".card").innerHTML = `
+        <h1>🌹</h1>
+        <p>
+          Even from miles away,<br>
+          you are my favorite person.<br><br>
+          Happy Rose Day, my love ❤️
+        </p>
       `;
     }
   </script>
